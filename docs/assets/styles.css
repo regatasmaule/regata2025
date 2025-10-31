@@ -1,13 +1,76 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const btn = document.querySelector('.nav-toggle');
-  const nav = document.querySelector('.site-nav');
-  if (btn && nav) {
-    btn.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-  }
-  const y = document.getElementById('year');
-  if (y) y.textContent = new Date().getFullYear();
-});
+:root{
+  --bg:#0b1020;
+  --card:#111833;
+  --text:#e8ecf4;
+  --muted:#a9b4c7;
+  --brand:#3dd6ed;
+  --brand-2:#6dffa8;
+  --border:#243050;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans";
+  background:linear-gradient(180deg, #0b1020 0%, #0e1630 100%);
+  color:var(--text);
+}
+img{max-width:100%; display:block}
+.container{width:min(1100px, 92%); margin-inline:auto}
 
+/* Header */
+.site-header{position:sticky; top:0; z-index:20; background:rgba(11,16,32,.7); backdrop-filter: blur(8px); border-bottom:1px solid var(--border)}
+.header-inner{display:flex; align-items:center; justify-content:space-between; padding:12px 0}
+.brand{display:flex; align-items:center; gap:.6rem; font-weight:700; color:var(--text); text-decoration:none}
+.brand img{width:28px; height:28px}
+.site-nav{display:flex; gap:1rem}
+.site-nav a{color:var(--muted); text-decoration:none; padding:8px 10px; border-radius:10px}
+.site-nav a:hover{background:var(--card); color:var(--text)}
+.nav-toggle{display:none; background:none; color:var(--text); font-size:1.4rem; border:1px solid var(--border); border-radius:10px; padding:4px 10px}
+
+/* Hero */
+.hero{padding:48px 0 24px; border-bottom:1px solid var(--border)}
+.hero-inner{display:grid; grid-template-columns:1.2fr .8fr; gap:2rem; align-items:center}
+.hero h1{font-size:clamp(2rem, 2.8vw, 3rem); margin:.2rem 0 1rem}
+.hero p{color:var(--muted); line-height:1.6}
+.cta{display:flex; flex-wrap:wrap; gap:.8rem; margin-top:1rem}
+.btn{display:inline-block; padding:12px 16px; border-radius:12px; text-decoration:none; color:var(--text); border:1px solid var(--border); transition:transform .06s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary{background:linear-gradient(90deg, var(--brand), var(--brand-2)); color:#0b1020; border:none; font-weight:700}
+.btn.outline{background:transparent}
+.btn.small{padding:8px 10px; font-size:.95rem}
+.link{color:var(--brand); text-decoration:none}
+
+/* Cards */
+.highlights{padding:28px 0 40px}
+.grid-3{display:grid; grid-template-columns:repeat(3, 1fr); gap:1rem}
+.card{background:var(--card); border:1px solid var(--border); border-radius:16px; padding:16px}
+.stack{display:flex; gap:.5rem; margin-top:.6rem}
+
+/* Content */
+.content{padding:28px 0 40px}
+.content.narrow{max-width:900px}
+.table-wrapper{overflow:auto; border:1px solid var(--border); border-radius:12px}
+.table-wrapper table{width:100%; border-collapse:collapse}
+.table-wrapper th, .table-wrapper td{padding:12px 14px; border-bottom:1px solid var(--border)}
+.table-wrapper thead{background:#0e1838}
+
+.map-embed{margin-top:12px; border:1px solid var(--border); border-radius:12px; overflow:hidden}
+.map-embed iframe{display:block; width:100%; height:380px}
+
+.form-embed iframe{border:none; border-radius:12px; background:#fff}
+.muted{color:var(--muted)}
+
+/* Footer */
+.site-footer{border-top:1px solid var(--border); background:rgba(11,16,32,.5)}
+.footer-inner{display:flex; align-items:center; justify-content:space-between; padding:18px 0}
+.footer-nav{display:flex; gap:1rem}
+.footer-nav a{color:var(--muted); text-decoration:none}
+
+/* Responsive */
+@media (max-width: 860px){
+  .hero-inner{grid-template-columns:1fr}
+  .grid-3{grid-template-columns:1fr}
+  .site-nav{display:none; position:absolute; top:56px; right:4%; background:var(--card); border:1px solid var(--border); padding:10px; border-radius:14px; flex-direction:column; width:220px}
+  .nav-toggle{display:block}
+  .site-nav.open{display:flex}
+}
