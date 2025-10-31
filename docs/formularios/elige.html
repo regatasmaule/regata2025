@@ -4,41 +4,94 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Elige tu inscripción — Regata del Maule</title>
+  <link rel="icon" href="../assets/img/logo-regata.svg" />
   <link rel="stylesheet" href="../assets/styles.css" />
+  <style>
+    .choose {
+      padding: 40px 0 60px;
+      text-align: center;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .choice {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+    .choice:hover {
+      transform: translateY(-3px);
+      border-color: var(--brand);
+    }
+    .choice h2 {
+      margin: 0.4rem 0;
+      color: var(--text);
+    }
+    .choice p {
+      color: var(--muted);
+      margin: 0.2rem 0 1rem;
+    }
+    .choice img {
+      width: 120px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 860px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
+
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="../">Regata del Maule</a>
+    <a class="brand" href="../">
+      <img src="../assets/img/logo-regata.svg" alt="Logo Regata del Maule" />
+      Regata del Maule
+    </a>
     <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
-    <nav class="site-nav">
+    <nav class="site-nav" aria-label="Principal">
       <a href="../">Inicio</a>
       <a href="../info.html">Información</a>
     </nav>
   </div>
 </header>
 
-<main class="container content narrow">
-  <h1>Elige tu inscripción</h1>
-  <p class="muted">Selecciona el tipo de participación para continuar.</p>
+<main class="container choose">
+  <h1>Elige tu tipo de inscripción</h1>
+  <p class="muted">Selecciona la categoría en la que deseas participar:</p>
 
-  <div class="grid-2" style="margin-top:1.5rem;">
-    <div class="card">
+  <div class="grid-2">
+    <article class="choice">
+      <img src="../assets/img/logo-regata.svg" alt="Competitiva" />
       <h2>Regata Competitiva</h2>
       <p>Participa en la bajada oficial Talca → González Bastías → Constitución.</p>
-      <a class="btn primary" href="./inscripcion-competitiva.html">Ir al formulario</a>
-    </div>
-    <div class="card">
+      <a class="btn primary" href="./inscripcion-competitiva.html">Inscribirme</a>
+    </article>
+
+    <article class="choice">
+      <img src="../assets/img/logo-regata.svg" alt="Exhibición" />
       <h2>Regata de Exhibición</h2>
-      <p>Carrera corta (3 km) para categorías menores y Bote Dragón.</p>
-      <a class="btn primary" href="./inscripcion-exhibicion.html">Ir al formulario</a>
-    </div>
+      <p>Disfruta la carrera de exhibición (3 km) junto al Bote Dragón.</p>
+      <a class="btn primary" href="./inscripcion-exhibicion.html">Inscribirme</a>
+    </article>
   </div>
 </main>
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <p>© <span id="year"></span> Regata del Maule — Talca.</p>
+    <p>© <span id="year"></span> Regata del Maule — Talca, Región del Maule.</p>
   </div>
 </footer>
 
