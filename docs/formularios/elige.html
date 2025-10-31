@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elige tu inscripción — Regata del Maule</title>
+  <link rel="icon" href="../assets/img/logo.svg" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <style>
+    .choose { padding: 28px 0 40px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem; }
+    .choice { background: var(--card); border:1px solid var(--border); border-radius:16px; padding:18px; display:flex; flex-direction:column; gap:.5rem }
+    .choice h2 { margin:.2rem 0; }
+    .choice p { color: var(--muted); margin:0 0 .5rem; }
+    .choice .actions { margin-top:auto; display:flex; gap:.6rem; flex-wrap:wrap; }
+    @media (max-width:860px){ .grid-2{ grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../">Regata del Maule</a>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="site-nav" aria-label="Principal">
+      <a href="../">Inicio</a>
+      <a href="../info.html">Información</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container choose">
+  <h1>Elige tu inscripción</h1>
+  <p class="muted">Selecciona el tipo de participación para continuar con el formulario.</p>
+
+  <div class="grid-2">
+    <article class="choice">
+      <h2>Regata Competitiva</h2>
+      <p>Participa en la bajada oficial: Talca → González Bastías → Constitución.</p>
+      <div class="actions">
+        <a class="btn primary" href="./inscripcion.html#competitiva">Inscribirme en la Competitiva</a>
+        <a class="btn outline" href="../info.html#horarios">Ver horarios</a>
+      </div>
+    </article>
+
+    <article class="choice">
+      <h2>Regata de Exhibición</h2>
+      <p>Formato exhibición (3 km) con categorías menores y Bote Dragón.</p>
+      <div class="actions">
+        <a class="btn primary" href="./inscripcion.html#exhibicion">Inscribirme en la Exhibición</a>
+        <a class="btn outline" href="../info.html#horarios">Ver horarios</a>
+      </div>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> Regata del Maule — Talca.</p>
+  </div>
+</footer>
+
+<script src="../assets/script.js" defer></script>
+</body>
+</html>
