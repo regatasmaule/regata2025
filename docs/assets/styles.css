@@ -179,3 +179,21 @@ a.link:hover {
     font-size: 1.5rem;
   }
 }
+
+/* Layout flexible para footer fijo al fondo */
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+main {
+  flex: 1; /* ocupa todo el espacio disponible entre header y footer */
+}
+
+/* footer se queda al fondo */
+.site-footer {
+  margin-top: auto;
+}
+
