@@ -18,8 +18,10 @@
     <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
     <nav class="site-nav" aria-label="Principal">
       <a href="./info.html">Información</a>
-      <!-- Enlace que abre el popup del formulario -->
-      <a href="#" data-fillout-open="ng2f4KphPKus" role="button">Inscripción</a>
+      <!-- Enlace que abre el popup (sin navegación) -->
+      <a class="open-form" href="javascript:void(0)" data-fillout-open="ng2f4KphPKus" role="button">
+        Inscripción
+      </a>
     </nav>
   </div>
 </header>
@@ -31,12 +33,13 @@
         <h1>Regata del Maule</h1>
         <p><strong>01–02 de noviembre de 2025 · ¡47 años de historia!</strong></p>
         <p>
-          Evento náutico en el río Maule — Talca, Región del Maule.  
+          Evento náutico en el río Maule — Talca, Región del Maule.
           Participa en modalidad <em>Competitiva</em> o <em>Exhibición</em> con un único formulario.
         </p>
         <div class="cta">
-          <!-- Botón principal que abre el popup -->
-          <a class="btn primary" href="#" data-fillout-open="ng2f4KphPKus" role="button">Inscríbete</a>
+          <a class="btn primary open-form" href="javascript:void(0)" data-fillout-open="ng2f4KphPKus" role="button">
+            Inscríbete
+          </a>
           <a class="btn outline" href="./info.html">Ver información</a>
         </div>
       </div>
@@ -51,11 +54,13 @@
 
     <h2>¿Dónde?</h2>
     <p>Río Maule, Talca. Puntos de partida y meta indicados con mapa y traslados.</p>
-    <a class="link" href="./info.html#mapa">Cómo llegar →</a>
+    <a class="link" href="./info.html#ubicacion">Cómo llegar →</a>
 
     <h2>Participa</h2>
     <p>Inscríbete con un solo formulario y elige tu categoría dentro del mismo.</p>
-    <a class="btn primary" href="#" data-fillout-open="ng2f4KphPKus" role="button">Inscripción</a>
+    <a class="btn primary open-form" href="javascript:void(0)" data-fillout-open="ng2f4KphPKus" role="button">
+      Inscripción
+    </a>
   </section>
 </main>
 
@@ -79,6 +84,7 @@
 </div>
 <script src="https://server.fillout.com/embed/v1/"></script>
 
+<!-- Tu JS (incluye fix para evitar navegación y abrir siempre el popup) -->
 <script src="assets/script.js" defer></script>
 </body>
 </html>
