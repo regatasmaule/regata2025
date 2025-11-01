@@ -12,14 +12,13 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="./">
-   
       Regata del Maule
     </a>
     <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
     <nav class="site-nav" aria-label="Principal">
       <a href="./info.html">Información</a>
-      <!-- Abre popup; si falla, el JS hará fallback al formulario hospedado -->
-      <a class="open-form" href="javascript:void(0)" data-fillout-open="ng2f4KphPKus" role="button">
+      <!-- Enlace normal: redirige a la página de inscripción -->
+      <a class="open-form" href="./formularios/inscripcion.html" role="button">
         Inscripción
       </a>
     </nav>
@@ -37,9 +36,8 @@
           Participa en modalidad <em>Competitiva</em> o <em>Exhibición</em> con un único formulario.
         </p>
         <div class="cta">
-<a class="btn primary" href="./formularios/inscripcion.html">Inscríbete</a>
-            Inscríbete
-          </a>
+          <!-- CTA principal: redirige -->
+          <a class="btn primary" href="./formularios/inscripcion.html">Inscríbete</a>
           <a class="btn outline" href="./info.html">Ver información</a>
         </div>
       </div>
@@ -58,9 +56,8 @@
 
     <h2>Participa</h2>
     <p>Inscríbete con un solo formulario y elige tu categoría dentro del mismo.</p>
-<a class="btn primary" href="./formularios/inscripcion.html">Inscríbete</a>
-      Inscripción
-    </a>
+    <!-- Botón secundario: redirige -->
+    <a class="btn primary" href="./formularios/inscripcion.html">Inscríbete</a>
   </section>
 </main>
 
@@ -74,20 +71,7 @@
   </div>
 </footer>
 
-<!-- Popup Fillout: 1 vez por página -->
-<div
-  id="fillout-popup-host"
-  data-fillout-id="ng2f4KphPKus"
-  data-fillout-embed-type="popup"
-  data-fillout-dynamic-resize
-  data-fillout-inherit-parameters
-  data-fillout-popup-size="medium">
-</div>
-
-<!-- Script oficial de Fillout (debe ir ANTES de tu script) -->
-<script src="https://server.fillout.com/embed/v1/"></script>
-
-<!-- Tu JS (maneja menú, año y fallback del popup) -->
+<!-- Tu JS (menú móvil + año dinámico) -->
 <script src="assets/script.js" defer></script>
 </body>
 </html>
