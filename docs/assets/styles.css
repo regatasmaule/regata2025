@@ -181,3 +181,16 @@ p a { text-decoration: underline; }
 .muted { color: var(--muted); }
 .center { text-align: center; }
 .hide { display: none !important; }
+
+/* Botones del header en amarillo (var(--accent)) */
+.site-header .site-nav .btn {
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+  background: transparent;
+}
+
+.site-header .site-nav .btn:hover {
+  background: var(--accent);
+  color: var(--text);
+}
+
