@@ -3,37 +3,50 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Información — Regata del Maule</title>
-  <link rel="icon" href="assets/img/logo.svg" />
+  <title>Información — Regata del Maule 2025</title>
+  <link rel="icon" href="assets/img/logo-regata.svg" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
+
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="./">Regata del Maule</a>
+    <a class="brand" href="./">
+      <img src="assets/img/logo-regata.svg" alt="Logo Regata del Maule" />
+      Regata del Maule
+    </a>
     <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
     <nav class="site-nav" aria-label="Principal">
-      <a href="./">Inicio</a>
+      <a href="./index.html">Inicio</a>
       <a href="#horarios">Horarios</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#traslados">Traslados</a>
       <a href="#comida">Comida</a>
       <a href="#reglas">Reglas</a>
       <a href="#seguridad">Seguridad</a>
-      <a href="#reglamentacion">Reglamentación</a>
+      <a href="#reglamento">Reglamento</a>
+      <a href="#contacto">Contacto</a>
+      <a class="open-form" href="javascript:void(0)" data-fillout-open="ng2f4KphPKus" role="button">Inscripción</a>
     </nav>
   </div>
 </header>
 
-<main class="container content">
-  <h1>Información general</h1>
-  <p>
-    <strong>Fechas oficiales:</strong> 01 y 02 de noviembre de 2025. 
-    Este 2025 celebramos <strong>47 años</strong> de la Regata del Maule.
-  </p>
+<main>
 
-  <section id="horarios">
+  <!-- Intro -->
+  <section class="hero center">
+    <h1>Información general</h1>
+    <p>
+      <strong>Fechas oficiales:</strong> 01 y 02 de noviembre de 2025.  
+      Este 2025 celebramos <strong>47 años</strong> de la Regata del Maule.
+    </p>
+  </section>
+
+  <!-- Horarios (SE MANTIENE) -->
+  <section id="horarios" class="container">
     <h2>Horarios</h2>
 
-    <h3>Día 1 — Sábado 01 de noviembre (Talca → González Bastías)</h3>
+    <h3>Día 1 — Sábado (Talca → González Bastías)</h3>
     <div class="table-wrapper">
       <table>
         <thead><tr><th>Actividad</th><th>Hora</th><th>Detalle</th></tr></thead>
@@ -51,7 +64,7 @@
       </table>
     </div>
 
-    <h3>Día 2 — Domingo 02 de noviembre (González Bastías → Constitución)</h3>
+    <h3>Día 2 — Domingo (González Bastías → Constitución)</h3>
     <div class="table-wrapper">
       <table>
         <thead><tr><th>Actividad</th><th>Hora</th><th>Detalle</th></tr></thead>
@@ -66,16 +79,89 @@
     </div>
   </section>
 
-  <section id="comida">
+  <!-- Ubicación (NUEVA, SE AGREGA SIN ELIMINAR NADA) -->
+  <section id="ubicacion" class="container">
+    <h2>Ubicación</h2>
+    <p>Conoce los puntos principales de la regata, con enlaces directos a Google Maps.</p>
+
+    <div class="grid-places">
+
+      <!-- Largada -->
+      <article class="place-card">
+        <h3>Largada — Balneario Río Claro</h3>
+        <p><strong>Sector Norte</strong> — Club Municipal de Canotaje.</p>
+        <a href="https://maps.app.goo.gl/xxwWZNZvS5kpDcwr5" target="_blank" rel="noopener">
+          <img src="assets/img/rio-claro.jpg" alt="Balneario Río Claro, Talca" />
+        </a>
+        <p>
+          <a class="link" href="https://maps.app.goo.gl/xxwWZNZvS5kpDcwr5" target="_blank" rel="noopener">Ver en Google Maps →</a>
+        </p>
+      </article>
+
+      <!-- Etapa intermedia -->
+      <article class="place-card">
+        <h3>Segunda Etapa — Estación González Bastías</h3>
+        <p>Punto de recalada y colación del día sábado (Pencahue).</p>
+        <a href="https://maps.app.goo.gl/L6RQz8RWnK9pjhw36" target="_blank" rel="noopener">
+          <img src="assets/img/estacion-bastias.jpg" alt="Estación González Bastías" />
+        </a>
+        <p>
+          <a class="link" href="https://maps.app.goo.gl/L6RQz8RWnK9pjhw36" target="_blank" rel="noopener">Ver en Google Maps →</a>
+        </p>
+      </article>
+
+      <!-- Llegada -->
+      <article class="place-card">
+        <h3>Meta — Muelle Flotante de Constitución</h3>
+        <p>Punto final de la competencia y ceremonia de cierre.</p>
+        <a href="https://maps.app.goo.gl/UxQWmziqMyfUC7uC8" target="_blank" rel="noopener">
+          <img src="assets/img/muelle-constitucion.jpg" alt="Muelle Flotante de Constitución" />
+        </a>
+        <p>
+          <a class="link" href="https://maps.app.goo.gl/UxQWmziqMyfUC7uC8" target="_blank" rel="noopener">Ver en Google Maps →</a>
+        </p>
+      </article>
+
+      <!-- Colegio -->
+      <article class="place-card">
+        <h3>Colegio Santiago Oñederra</h3>
+        <p>Punto de reunión/almuerzo del día 2 (Constitución).</p>
+        <a href="https://maps.app.goo.gl/u3sjjBe5b1TUCqzh7" target="_blank" rel="noopener">
+          <img src="assets/img/colegio-onederra.jpg" alt="Colegio Santiago Oñederra" />
+        </a>
+        <p>
+          <a class="link" href="https://maps.app.goo.gl/u3sjjBe5b1TUCqzh7" target="_blank" rel="noopener">Ver en Google Maps →</a>
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Traslados (SE MANTIENE) -->
+  <section id="traslados" class="container">
+    <h2>Traslados y acceso</h2>
+    <p>Habrá señalización desde Talca hacia los puntos de partida y meta. Se recomienda compartir vehículo y llegar con tiempo.</p>
+    <div class="map-embed">
+      <iframe
+        title="Mapa general"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-72.9,-35.9,-71.3,-35.2&amp;layer=mapnik"
+        loading="lazy" allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Comida (SE MANTIENE) -->
+  <section id="comida" class="container">
     <h2>Comida y servicios</h2>
     <ul>
       <li><strong>Día 1:</strong> Colación y almuerzo en Restorán Estación González Bastías.</li>
       <li><strong>Día 2:</strong> Colación y almuerzo en Colegio Santiago Oñederra.</li>
-      <li>Food trucks, hidratación y baños en zonas de meta.</li>
+      <li>Habrá hidratación, baños y food trucks en zonas de meta.</li>
     </ul>
   </section>
 
-  <section id="reglas">
+  <!-- Reglas (SE MANTIENE) -->
+  <section id="reglas" class="container">
     <h2>Reglas básicas</h2>
     <ul>
       <li>Uso obligatorio de chaleco salvavidas homologado.</li>
@@ -84,7 +170,8 @@
     </ul>
   </section>
 
-  <section id="seguridad">
+  <!-- Seguridad (SE MANTIENE) -->
+  <section id="seguridad" class="container">
     <h2>Seguridad</h2>
     <ul>
       <li>Embarcaciones de apoyo a lo largo del recorrido.</li>
@@ -92,18 +179,34 @@
     </ul>
   </section>
 
-  <section id="reglamentacion">
-    <h2>Reglamentación</h2>
+  <!-- Reglamento (SE MANTIENE) -->
+  <section id="reglamento" class="container">
+    <h2>Reglamento</h2>
     <p>Próximamente disponibles los PDF oficiales del reglamento y anexos de seguridad.</p>
+    <!-- Si ya tienes el PDF, quita la línea de arriba y descomenta la de abajo -->
+    <!-- <a class="btn outline" href="assets/docs/reglamento.pdf" target="_blank" rel="noopener">Descargar reglamento</a> -->
   </section>
+
+  <!-- Contacto (SE MANTIENE) -->
+  <section id="contacto" class="container center">
+    <h2>Contacto</h2>
+    <p>¿Dudas? Escríbenos a <a class="link" href="mailto:contacto@regatadelmaule.cl">contacto@regatadelmaule.cl</a></p>
+    <a class="btn primary open-form" href="javascript:void(0)" data-fillout-open="ng2f4KphPKus">Inscribirse</a>
+  </section>
+
 </main>
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <p>© <span id="year"></span> Regata del Maule — Talca.</p>
+    <p>© <span id="year"></span> Regata del Maule — Talca, Región del Maule.</p>
+    <nav class="footer-nav">
+      <a href="#reglamento">Reglamento</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
   </div>
 </footer>
-<!-- Popup Fillout: incluir una sola vez por página -->
+
+<!-- Popup Fillout (un único formulario en modo popup) -->
 <div
   data-fillout-id="ng2f4KphPKus"
   data-fillout-embed-type="popup"
@@ -112,6 +215,7 @@
   data-fillout-popup-size="medium">
 </div>
 <script src="https://server.fillout.com/embed/v1/"></script>
+
 <script src="assets/script.js" defer></script>
 </body>
 </html>
