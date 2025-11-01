@@ -18,7 +18,7 @@
     <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
     <nav class="site-nav" aria-label="Principal">
       <a href="./info.html">Información</a>
-      <!-- Enlace que abre el popup (sin navegación) -->
+      <!-- Abre popup; si falla, el JS hará fallback al formulario hospedado -->
       <a class="open-form" href="javascript:void(0)" data-fillout-open="ng2f4KphPKus" role="button">
         Inscripción
       </a>
@@ -43,7 +43,7 @@
           <a class="btn outline" href="./info.html">Ver información</a>
         </div>
       </div>
-      <img src="assets/img/banner.png" alt="Banner Regata del Maule — 47 años" />
+      <img src="assets/img/banner-regata.svg" alt="Banner Regata del Maule — 47 años" />
     </div>
   </section>
 
@@ -74,17 +74,20 @@
   </div>
 </footer>
 
-<!-- Popup Fillout: incluir una sola vez por página -->
+<!-- Popup Fillout: 1 vez por página -->
 <div
+  id="fillout-popup-host"
   data-fillout-id="ng2f4KphPKus"
   data-fillout-embed-type="popup"
   data-fillout-dynamic-resize
   data-fillout-inherit-parameters
   data-fillout-popup-size="medium">
 </div>
+
+<!-- Script oficial de Fillout (debe ir ANTES de tu script) -->
 <script src="https://server.fillout.com/embed/v1/"></script>
 
-<!-- Tu JS (incluye fix para evitar navegación y abrir siempre el popup) -->
+<!-- Tu JS (maneja menú, año y fallback del popup) -->
 <script src="assets/script.js" defer></script>
 </body>
 </html>
